@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            margin-left: 100px;
+
+            p {
+                background: peachpuff;
+                max-width: 1200px;
+            }
+     
+        }
+    </style>
+
+</head>
+<body>
+    <h3>Type conversion
+    </h3>
+
+    <p><b>Type conversion</b> - Javascript dasturlash tilitda saqlanayotgan malumot turini bir ko'rinishi ikkinchi ko'rinishiga o'tkazish
+    </p>
+
+    <h2>Number</h2>
+    <p><b>Number</b> - primitiv o'rab turuvchi obyektdan foydalanib, berilgan ma'lumot turini son ko'rinishiga o'tkazish mavjud. Agar berilgan ma'lumot son ko'rinishiga o'tkazish imkni bo'lmasa, <b>NaN</b> maxsus qiymatini yuzaga keladi</p>
+
+    <p>const yosh = '23'; // string</p>
+    <p>console.log(yosh); // string</p>
+    <p>console.log( Number(yosh)); // Number</p>
+
+
+    <p>console.log(yosh+1); // 231 (concantenation)</p>
+    <p>console.log(Number(yosh)+1); // 24</p>
+
+
+    <p>const ism = 'Muhammadrizo';</p>
+    <p>console.log(Number(ism)); // Nan</p>
+
+
+    <h2>String</h2>
+
+    <p><b>String</b> - primitiv o'rab turuvchi obyektidan foydalanib, berilgan ma'lumot turini string ko'rinishiga o'tkazishb imkoniyati mavjud.</p>
+
+    <p>const yil = '2024'; // Number</p>
+    <p>console.log(yil); // Number</p>
+    <p>console.log(String(yil)); // String</p>
+
+<hr>
+
+    <h2>Type coercion</h2>
+
+    <p><b>type coercion</b> - Javascript dasturlash tilida operator turli xil qiymatlar ustida ish olib borayotganda, ularda birinign avtomatik ravishda boshqa turga o'tishi. Boshqa qilib aytganda ma'lumot turini avtomatik ravishda bir ko'rinishdan ikkinchi ko'rinishga o'tish</p>
+
+
+    <h3>Auto string conversion</h3>
+
+
+    <p>console.log('Men' + 2005 + 'chi yilda tug'ilganman''); // auton string son</p>
+
+
+    <h3>Auto number conversion</h3>
+
+    <p>console.log('30' - '10' - 5 ); auto string conversion</p>
+
+
+    <hr>
+
+
+    <h2>Truthy va Falsy</h2>
+
+    <p><b>Javascript</b> dasturlash tilida berilgan qiymatni Boolean ko'rinshiga o'tkazilganda ular Truthy bu true ya'ni rist qiymatga ega bo'gan ma'lumotlar, Falsy esa false qiymatiga ega bo'laganlarga aytiladi </p>
+
+    <h3>Falsy ko'rinishida keladigan qiymatlar</h3>
+    <ul>
+        <li>false</li>
+        <li>0</li>
+        <li>''</li>
+        <li>undefined</li>
+        <li>null</li>
+        <li>NaN</li>
+        <li>On</li>
+    </ul>
+
+
+    <h3>//Falsy qiymatlar</h3>
+    <p>console.log(Boolean(false));</p>
+    <p>console.log(Boolean(0));</p>
+    <p>console.log(Boolean(''));</p>
+    <p>console.log(Boolean(undefined));</p>
+    <p>console.log(Boolean(null));</p>
+    <p>console.log(Boolean(Nan));</p>
+    <p>console.log(Boolean(On));</p>
+
+
+    <h3>//Truthy qiymatlar</h3>
+    <p>console.log(Boolean(Muhammadrizo));</p>
+    <p>console.log(Boolean(18));</p>
+    <p>console.log(Boolean([]));</p>
+    <p>console.log(Boolean({}));</p>
+    <p>console.log(Boolean('0'));</p>
+    <p>console.log(Boolean(false));</p>
+    
+
+    <h3>Misol</h3>
+    <p>const ism = '' ;</p>
+    <p>if (ism) { </p>
+    <p>console.log('Sizning ismingiz' + ism);</p>
+    <p>} else {</p>
+    <p> console.log ('Iltimos ism kiriting');</p>
+    <p>}</p>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
