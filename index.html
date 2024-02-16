@@ -1,124 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 oy 2 - dars</title>
-    
+    <title>4.3-dars uy ishi</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column ;
-            justify-content: center;
-            margin-left: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-            p {
-                background: peachpuff;
-                max-width: 1200px;
+        p {
+            font-weight: 400;
+            height: 40px;
+            background: beige;
+            border-radius: 12px;
+            padding-left: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .names {
+            height: 95px;
+            color: chartreuse;
+        }
+
+        .names span {
+            color: darkmagenta;
+        }
+
+        .variable {
+            height: 130px;
+
+            span {
+                color: blue;
             }
-     
+        }
+
+        .xato {
+            height: 130px;
+        }
+
+        .mode {
+            height: 70px
+        }
+
+        .text {
+            height: 70px;
+        }
+
+        .js {
+            height: 70px;
+        }
+
+        .arifmetik {
+            height: 300px;
+        }
+
+        .sol {
+            height: 280px;
+        }
+        .tayin {
+            height: 300px;
+        }
+        .str {
+            height: 70px;
+        }
+        .strin {
+            height: 85px;
+        }
+        .logic {
+            height: 88px;
         }
     </style>
-
 </head>
+
 <body>
- 
+    <h4>Developer console</h4>
+    <p> 💡 Javascript kodni tezda ishga tushurish uchun foydalaniladi</p>
 
-    <h3>Type conversion
-    </h3>
+    <h4>Javascript asosan 2 xil ko'rinishda veb sahifaga ochilganda ishga tuashadi</h4>
 
-    <p><b>Type conversion</b> - Javascript dasturlash tilitda saqlanayotgan malumot turini bir ko'rinishi ikkinchi ko'rinishiga o'tkazish
-    </p>
-
-    <h2>Number</h2>
-    <p><b>Number</b> - primitiv o'rab turuvchi obyektdan foydalanib, berilgan ma'lumot turini son ko'rinishiga o'tkazish mavjud. Agar berilgan ma'lumot son ko'rinishiga o'tkazish imkni bo'lmasa, <b>NaN</b> maxsus qiymatini yuzaga keladi</p>
-
-    <p>const yosh = '23'; // string</p>
-    <p>console.log(yosh); // string</p>
-    <p>console.log( Number(yosh)); // Number</p>
-
-
-    <p>console.log(yosh+1); // 231 (concantenation)</p>
-    <p>console.log(Number(yosh)+1); // 24</p>
-
-
-    <p>const ism = 'Muhammadrizo';</p>
-    <p>console.log(Number(ism)); // Nan</p>
-
-
-    <h2>String</h2>
-
-    <p><b>String</b> - primitiv o'rab turuvchi obyektidan foydalanib, berilgan ma'lumot turini string ko'rinishiga o'tkazishb imkoniyati mavjud.</p>
-
-    <p>const yil = '2024'; // Number</p>
-    <p>console.log(yil); // Number</p>
-    <p>console.log(String(yil)); // String</p>
-
-<hr>
-
-    <h2>Type coercion</h2>
-
-    <p><b>type coercion</b> - Javascript dasturlash tilida operator turli xil qiymatlar ustida ish olib borayotganda, ularda birinign avtomatik ravishda boshqa turga o'tishi. Boshqa qilib aytganda ma'lumot turini avtomatik ravishda bir ko'rinishdan ikkinchi ko'rinishga o'tish</p>
-
-
-    <h3>Auto string conversion</h3>
-
-
-    <p>console.log('Men' + 2005 + 'chi yilda tug'ilganman''); // auton string son</p>
-
-
-    <h3>Auto number conversion</h3>
-
-    <p>console.log('30' - '10' - 5 ); auto string conversion</p>
-
+    <p>💡 script tegi orasida kerakli Javascript kodlar yozib ketiladi va veb sahiafaga ochilganda ishga tushadi</p>
 
     <hr>
 
+    <h2>Qiymatlar va o'zgaruvchilar</h2>
 
-    <h2>Truthy va Falsy</h2>
+    <h4>Qiymatlar</h4>
+    <p>💡 <b>Qiymat</b> - eng kichik ko'rinishidagi ma'lumot yoki ma'lumot bo'lagi</p>
+    <p class="names">"Muhammadrizo" <br>
+        "Pulatov" <br>
+        <span>23</span> <br>
+        <span>4.99</span>
+    </p>
 
-    <p><b>Javascript</b> dasturlash tilida berilgan qiymatni Boolean ko'rinshiga o'tkazilganda ular Truthy bu true ya'ni rist qiymatga ega bo'gan ma'lumotlar, Falsy esa false qiymatiga ega bo'laganlarga aytiladi </p>
+    <h4>O'zgaruvchilar</h4>
+    <p>💡 <b>O'zgaruvchi (variable) </b> - o'zida ma'lum bir qiymatni saqlovchi konteyner (container).</p>
 
-    <h3>Falsy ko'rinishida keladigan qiymatlar</h3>
+    <img src="https://usemynotes.com/wp-content/uploads/2021/04/what-are-variables-in-javascript.jpg" alt="" width="300"
+        height="300">
+
+    <p>💡 O'zgaruvchini qutiga o'xshatish mumkin. Uning ichiga narsalarni solib, qutiga nom berib, belgilab qo'yishimiz
+        mumkin bo'ladi. Keyinchalik shu belgi orqali izlab topish imkoniyatiga ega bo'lamiz.</p>
+
+    <p class="variable">
+        <span>let</span> ism = `Muhammadrizo` <br>
+        <span>let</span> familya = `Pulatov` <br>
+        <span>let</span> yosh = `18` <br>
+        console.log (ism); <br>
+        console.log (familya) <br>
+        console.log (yosh)
+    </p>
+
+    <h4>O'zgaruvchialarni e'lon qilish</h4>
+    <p>💡 O'zgaruvchilarni e'lon qilish so'ngina ishlatish imkoniyati mavjud . E'lon qilinamgan o'zgaruvchilarni
+        ishlatish xatolikka olib keladi</p>
+
+    <p>
+        console.log (ism) <br>
+        let (ism) = `Muhammadrizo`
+    </p>
+
+    <h3>O'zgaruvchilarga nom berish</h3>
+    <p>💡 O'zgaruvchilarga nom berish , u o'zida qanday ma'lumot saqlashiini hisobiga olib, berilgan nom saqlayotgan
+        ma'lumotni ifoda etib turishi kerak. O'zgaruvchilar odatda <b>camelCase</b> ko'rinishida yoziladi</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/CamelCase_new.svg/1200px-CamelCase_new.svg.png"
+        alt="" width="300" height="300">
+
+    <p>
+        let ism = `Muhammadrizo` ;✅
+        let var1 = `Muhammadrizo`;❌
+
+        let userName1 = `username`;✅
+        let user_nomi = `usename`;❌
+    </p>
+
+    <h4>O'zgaruvchi nomi quyidagicha qoidalarga amal qilishi lozim:</h4>
+
     <ul>
-        <li>false</li>
-        <li>0</li>
-        <li>''</li>
-        <li>undefined</li>
-        <li>null</li>
-        <li>NaN</li>
-        <li>On</li>
+        <li>O'zgaruvchi nomida bo;sh joy (space) bo'lishi mumkni emaas</li>
+        <li> O'zgaruvchi nomi harf, pastki chiziqcha(_) yoki dollar belgisi ($) bilan boshlanishi shart </li>
+        <li> O;zgaruvchi nomi faqatgina harf, raqam, pastki chiziqcha yoki dollar belgiidan tashkil topishi shart</li>
+        <li> Ma'lum bir zaxiralangan nomlarni (reserved words) o'zgaruvchi nomiga berish taqiqlanadi </li>
+        <li>O'zgaruvchilar nomi case-sensitive ya'ni katta-kichik harfalr turli xil deb qabul qiladi</li>
     </ul>
 
+    <p class="xato">
+        let with spcae = `withSpace` ;❌ <br>
+        let 1StartWithNumber = `startwithNumber`; ❌ <br>
+        let other@SymbolUsed = `otherSymbolUsed`; ❌ <br>
+        let for = `Reserved word`;❌ <br>
+        let firstName = `Muhammadrizo`; <br>
+        let firsTName = `Muhammadrizo`
+    </p>
 
-    <h3>//Falsy qiymatlar</h3>
-    <p>console.log(Boolean(false));</p>
-    <p>console.log(Boolean(0));</p>
-    <p>console.log(Boolean(''));</p>
-    <p>console.log(Boolean(undefined));</p>
-    <p>console.log(Boolean(null));</p>
-    <p>console.log(Boolean(Nan));</p>
-    <p>console.log(Boolean(On));</p>
+    <hr>
+
+    <h2>Ma'lumot turlari</h2>
+    <h4>Ma'lumot turlari (data types)</h4>
+    <p>💡 Javascript dasturlash
+        tilida qiymatlar 2 guruhga bo'linadi: <b>primitive</b> va <b>object</b>
+    </p>
+
+    <h4>Primitive turdagilar</h4>
+    <p>💡 <b>Primitive</b> quyidagi to'g'ridan-to'g'ri
+        murojat qiladigan manzilda joylashadi
+    </p>
+
+    <ul>
+        <li> <b>Number</b> - sonlarni o'zida saqlovchi ma'lumot turi</li>
+        <p>
+            let age = `23`
+            let price = `19.33`
+        </p>
+        <li><b>String</b> - o'zida belgilar ketma-ket saqlovchi ma'lumot turi</li>
+        <p> let firstName = `Muhammadrizo`</p>
+        <li><b>Boolean</b> - mantiqiy ma'lumot turi bo'lib faqatgina true (rost) yoki false (yolg'on) qiymatini qabul
+            qilish mumkin bo'lgan ma'lumot turi</li>
+        <p>let isUser = true;</p>
+        <li><b>Undefined</b>- hali aniqlanmagan ma'lumot turi</li>
+        <p>let student</p>
+        <li><b>Null</b> - bo'sh qiymatiga ega bo'lgan ma'lumot turi</li>
+        <p>let school = null;</p>
+        <li> <b>Symbols</b>- yagona (unique) va o'zgarmas qiyamtiga ega bo'luvchi ma'lumot turi</li>
+        <p>let id = Symbol(`id`);</p>
+        <li><b>Bigint</b> - katta sonlarni saqlashga mo'lajallangan ma'lumot turi</li>
+        <p>cosnt alsoHuge = Bigint(1534343516846846)</p>
+    </ul>
+
+    <p class="js">💡 Javascript dynamic typing funksiyasiga gea bo'lib uning yordamida o'zgaruvchi saqlovchi ma'lumot
+        turini ko'rsatmasdan ham qiymat saqlashimiz mumkin. O'zgaruvchi saqlaydigan ma'lumot turi avtomatik tarzda
+        aniqlanadi</p>
+
+    <p>💡 typeof operatoridan foydalanib o'zgaruvchi saqlayotgan ma'lumotning turini aniqlash imkoniyati mavjud</p>
+
+    <p>
+        let age = 23;
+        console.log(typeof age);
+    </p>
+
+    <h3>Object turidagi qiymatlar</h3>
+    <p>💡 <b>Object</b> qiymat o'zgaruvchi murojat qilgan manzilda ko'rsatilgan boshqa manzilda saqlanadi</p>
+
+    <ul>
+        <li><b>Function</b></li>
+        <li><b>Array</b></li>
+        <li><b>Object</b></li>
+    </ul>
+
+    <hr>
+
+    <h2>let, const va var</h2>
+
+    <h4>O'zgaruvchilarni e'lon qilish</h4>
+    <p>💡 Javascript dasturlash tilida o'zgaruvchilarni 3 xil elon qilidh imkoniyati bor: <b>let</b> <b>const</b> va
+        <b>var</b> so'zlaridan foydalanib amalga oshiriladi. <b>let</b> va <b>const</b> ES6`da taqdim etilgan kalit so'z
+        hisoblanadi
+    </p>
+
+    <h4>let</h4>
+    <p>💡 <b>let</b> - dasturimiz ishlashi davomida o'zgarishi mumkin bo'lgan e'lon qilish uchun foydalaniladi</p>
+
+    <p>
+        let yosh =23
+        yosh = 24
+    </p>
+    <p>❗ Elon qilib bo'lingan o'zgaruvchi qiymatini o'zgartirishad hech qanday kalit so'zidan foydalanilmaydi</p>
+
+    <h4>const</h4>
+    <p>💡 <b>const</b> - dasturimiz ishlashi davomida o'zgarmaydigan o'zgaruvchilarni elon qlish uchun foydalaniladi</p>
+
+    <p>
+        const id = `AA0`
+        id = `AA1`❌
+    </p>
+    <p>❗ const yordamida elon qilingan o'zgaruvchilar har doim boshlangich qiymatga ega bo'lishi shart</p>
+
+    <h4>var</h4>
+    <p>💡 <b>var</b> - ES6`ga qadar o'zgaruvchilarni elon qilish uchun ishlatilgan kalit so'z. <b>let</b> bilan deyarli
+        bir xil vazifani bajargan</p>
+
+    <p>
+        var yosh =23
+        yosh = 24
+    </p>
+    <p class="text">❗ <b>let</b> va <b>var</b> o'xshash bo'lishiga qaramasdan ularning ma'lum bor farqlari mavjud.
+        <b>var</b> yordamida elon qilingan o'zgaruvchilarning <b>ko'rinsih ko'lami (scope) funksiya</b> darajasida
+        bo'lsa, <b>let</b> esa <b>blok</b> ko'rinadi
+    </p>
+
+    <p>
+        ism = `Muhammadrizo` ❌ <br>
+        console.log(ism)
+    </p>
+
+    <h3>Strict mode</h3>
+    <p>💡 Strict mode yordamida yozayotgan kodimizda xatolardan qochish imkoniyati mavjud</p>
+
+    <p class="mode">
+        `use strict` <br>
+        ism = `Muhammadrizo` <br>
+        console.log(ism)
+    </p>
+
+    <hr>
+
+    <h2>Asosiy aperatorlar</h2>
+    <p>💡 Operatorlar bir yoki bir nechta operandalr ustida amal bajaradi.Umumiy ko'rinishi quyidagicha</p>
+    <p>Javascript quyidagi operatorlar mavjud</p>
+    <ol>
+        <li>Arifmetik</li>
+        <li>Solishtirish</li>
+        <li>Tayinlash</li>
+    </ol>
+
+    <h3>Arifmetik aperatorlar</h3>
+    <p class="arifmetik">
+        let a = 5 b = 10 <br>
+        console.log (a+b); // 15 <br>
+        console.log (a-b); // -5 <br>
+        console.log (a*b); // 50 <br>
+        console.log (a/b); // 0.5 <br>
+        console.log (a%b); // 5 <br>
+        console.log (a++); // 5 (post-increment) <br>
+        console.log (a); // 6 <br>
+        console.log (++a); // 7 (pre-increment) <br>
+        console.log (a); // 7 <br>
+        console.log (b--); // 10 (post-decrement) <br>
+        console.log (b); // 9 <br>
+        console.log (--b); // 8 (pre-decrement) <br>
+        console.log (b); // 8
+
+    </p>
+
+    <h3>Solishtirish aperatorlar</h3>
+    <p class="sol">
+        let a = 5 b = 10 c= "5"; <br>
+        const z = a; <br>
+
+        console.log (a == c); // true <br>
+        console.log (a === c); // false <br>
+        console.log (a == z); // true <br>
+        console.log (a === z); // true <br>
+        console.log (a != b); // true <br>
+        console.log (a != z); // false <br>
+        console.log (a > b); // false <br>
+        console.log (a < b); // true <br>
+        console.log (a >= b); // false <br>
+        console.log (a <= b); // true 
+      
+</p>
+                <h3>Tayinlash aperatorlar</h3>
+                <p class="tayin">
+                    let a = 5, b = 10, c = 15; <br>
+ 
+                    console.log(a); // 5  <br>
+                    a = b <br>
+                    console.log(a); // 10 <br>
+                    a += b <br>
+                    console.log(a); // 20 <br>
+                    a -= b <br>
+                    console.log(b); // 10 <br>
+                    c *= b <br>
+                    console.log(c); // 150 <br>
+                    c /= 5 <br>
+                    console.log(c); // 30 <br>
+                    b %= 2 <br>
+                    console.log(b); // 0
+
+                </p>
+                <hr>
+
+<h2>String</h2>
+
+<h3>String</h3>
+<p class="strin">💡 String - belgilaar ketme-ketligidan tashkil topgan ma'lumot turi.Ularni bittalik ("") Yoki ikkkitalik ("") qo'shtirnoqlardan foydalanib yaratish imkoniyati mavjud ba'zi bir maxsus belgilardan tashkil topgan matnlarda odatda ikkitalik qo'shtirnoqlardan foydalaniladi</p>
+ <p class="strin">
+    let ism = `Muhammadrizo` <br>
+    console.log(ism)  <br>
+    let familya = `Pulatov`<br>
+    console.log (familya)
+ </p>
+
+ <h3>Birlashtirish</h3>
+
+<p>💡 Qo'shish (+) operatoridan foydalangan holda stringlarni qo'shish ya'ni concatenation qilish imkoniyati mavjud</p>
+<p class="str">
+    let ism = `Muhammadrizo` <br>
+    let message = `Salom` + ism + ` ! ` <br>
+    console.log (message)
+</p>
+
+<h3>Template literals</h3>
+
+<p>💡ES6 template literals ko'rinishida string yaratish imkoniyatini taqdim etadi va ular backtick (`` belgisidan foydalanib yaratiladi)</p>
+<p class="str">
+    let ism = `Muhammadrizo` <br>
+    let message = `Salom ${ism}`<br>
+        console.log (message) 
+</p>
+
+<hr>
 
 
-    <h3>//Truthy qiymatlar</h3>
-    <p>console.log(Boolean(Muhammadrizo));</p>
-    <p>console.log(Boolean(18));</p>
-    <p>console.log(Boolean([]));</p>
-    <p>console.log(Boolean({}));</p>
-    <p>console.log(Boolean('0'));</p>
-    <p>console.log(Boolean(false));</p>
-    
+<h2>Mantiqiy aperatorlar</h2>
+<h3>Boolean logic (mantiq)</h3>
+<p class="logic">💡 Dasturlar o'zida ma'lum bir solishtirish orqali qarao qablu qiladi.Boolean mantiq-algebraning bir qismi bo'lb, barcha qiymatlar True (rost)
+    yoki False (yolgon) qiymatlarda tahskil topgan buladi. BU qiymatlar malum bir shartni teshirishda ishlatilinadi.Boolean logic asosiy uch aperatordan tashkil topgan AND , OR va NOT
+</p>
 
-    <h3>Misol</h3>
-    <p>const ism = '' ;</p>
-    <p>if (ism) { </p>
-    <p>console.log('Sizning ismingiz' + ism);</p>
-    <p>} else {</p>
-    <p> console.log ('Iltimos ism kiriting');</p>
-    <p>}</p>
+<h3>AND aperatori</h3>
+<p>💡 Agar barcha qiymatlar Truedan tashkil topgan bo'lsa , natijaviy qiymat True bo'ladi,aks holda Flase qiymati yuzaga keladi</p>
+
+<table border="1" cellpadding="7" cellspacing="0" align="center" width="500">
+ <caption>TRUTH TABLE</caption>
+   <thead>
+    <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>A AND B</td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+        <td>FALSE</td>
+        <td>FALSE</td>
+        <td>FALSE</td>
+    </tr>
+    <tr>
+        <td>FALSE</td>
+        <td>TRUE</td>
+        <td>FALSE</td>
+    </tr>
+</tr>
+<tr>
+    <td>TRUE</td>
+    <td>FALSE</td>
+    <td>FALSE</td>
+</tr>
+</tr>
+<tr>
+    <td>TRUE</td>
+    <td>TRUE</td>
+    <td>TRUE</td>
+</tr>
+   </tbody>
+</table>
+
+ <h3>OR operator</h3>
+<p>💡 Agar hech bo'lmasa bir qiymat Truedan tashkil topgan bo'lsa , natijaviy qiymat True bo'ladi,aks holda False qiymat yuzaga kelad</p>
+
+<h3>NOT aperatori</h3>
+<p>💡 BErilgan qiymat True bo'lsa False ,False esa True qiymatni yuzaga keladi.Boshqacha qilib aytganfa brilgan qiymatni teskarisiga o'girb beradi</p>
+
+<p>Javascript codelari kamentdaa</p>
 
 
-    <script src="./app.js"></script>
+
+                <script src="./app.js"></script>
 </body>
+
 </html>
